@@ -22,7 +22,7 @@ function varargout = gs(varargin)
 
 % Edit the above text to modify the response to help mit
 
-% Last Modified by GUIDE v2.5 09-Jun-2023 13:56:21
+% Last Modified by GUIDE v2.5 17-Nov-2023 12:47:12
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -81,8 +81,10 @@ global eMIN
 global eMAX
 global pmMIN
 global pmMAX
+global dt
 
 RUN=0;
+dt = 0;
 
 fe=60;
 
@@ -638,3 +640,35 @@ function edit6_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes on slider movement.
+function slider3_Callback(hObject, eventdata, handles)
+% hObject    handle to slider3 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'Value') returns position of slider
+%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
+global dt
+dt = 0.05 * get(hObject,'Value');
+
+
+% --- Executes during object creation, after setting all properties.
+function slider3_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to slider3 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: slider controls usually have a light gray background.
+if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor',[.9 .9 .9]);
+end
+
+
+% --- Executes on button press in pushbutton5.
+function pushbutton5_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton5 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+reset()

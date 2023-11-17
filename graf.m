@@ -5,6 +5,7 @@ global e
 
 global ref_source
 
+global dt
 global RUN
 global LINHAS
 global R_FLUX
@@ -281,6 +282,7 @@ if gcount>=0
     hold off
     
     drawnow
+    pause(dt)
     
     gcount=0;
     
