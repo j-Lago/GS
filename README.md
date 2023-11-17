@@ -1,0 +1,2 @@
+# GS
+ Gerador Síncrono
