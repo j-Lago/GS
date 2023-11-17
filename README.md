@@ -1,3 +1,5 @@
-# Gerador SÌncrono
+# Gerador S√≠ncrono
 
-SimulaÁ„o para fins did·ticos de um gerador sÌncrono conectado ‡ um barramento infinito.
+Simula√ß√£o para fins did√°ticos de um gerador s√≠ncrono conectado √† um barramento infinito.
+
+![image](https://github.com/j-Lago/GS/assets/98105937/8d939e36-d900-4f4a-b314-415df9c36a7b)
